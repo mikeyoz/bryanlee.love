@@ -1,0 +1,163 @@
+body {
+	color: #34286f;
+	margin-top: 100px;
+}
+
+a {
+	text-decoration: none;
+	color: #34286f;
+	transition: 0.25s;
+}
+
+a:hover {
+	color: #d74d46;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0 10%;
+}
+
+.right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-end;
+	order: 2;
+}
+
+.right h1 {
+	color: inherit;
+	font-size: 60px;
+	margin-bottom: 0;
+}
+
+#tabs {
+	font-size: 25px;
+	margin-top: 0;
+}
+
+.left {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-style: italic;
+	text-align: left;
+}
+
+.left p {
+	width: 100%;
+}
+
+.left.home {
+	text-align: right;
+}
+
+.left img {
+	width: 100%;
+	height: auto;
+}
+
+.left.about img {
+	max-width: 300px;
+}
+
+.left h3 {
+	width: 100%;
+}
+
+.left.projects h3 {
+	text-align: right;
+}
+
+#tabs {
+	list-style: none;
+	text-align: right;
+}
+
+#tabs .active {
+	color: #d74d46;
+}
+
+#tabs .active:hover {
+	cursor: default;
+}
+
+.quote {
+	margin-top: 150px;
+	font-size: 17px;
+	font-style: italic;
+}
+
+.iframe-container {
+	overflow: hidden;
+	padding-top: 56.25%;
+	position: relative;
+	width: 100%;
+}
+
+.iframe-container iframe {
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+@media only screen and (max-width: 927px) {
+	body {
+		margin: 0;
+	}
+
+	.container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.left {
+		order: 2;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.left.projects h3 {
+		text-align: center;
+	}
+
+	#tabs {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+	}
+
+	.quote {
+		margin: 10px 0;
+	}
+
+	.right {
+		order: 1;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.popup img {
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	transition-duration: 0.4s;
+	transition-property: transform;
+}
+
+.popup img:hover,
+.popup img:focus,
+.popup img:active {
+	transform: scale(1.02);
+}
